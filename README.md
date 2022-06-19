@@ -1,7 +1,32 @@
-# USB_Key-JugendHacked
-A program running on a USB stick to encrypt and decrypt files.
-To use you need to put the .exe file on your usb-stick and execute the program.
-Then you choose a password and the file you would like to encrypt.
-Now you can pull ur usb-stick out of your computer.
-If you want to decrypt the file you need to put the usb-stick into your pc and start the program.
-Then you type your password and select to decrypt your file, now your file is decrypted.
+# CryptoUSB
+
+The programm is written to en/decrypt files in a safer way than usual.
+Because of the two factor authentication, that is achieved by using a combination of a USB-Flashdrive and a password,
+Crypto USB is much safer than other encryption software.
+
+## How to install CryptoUSB
+
+- Download the run.exe from https://github.com/Jugendhackt/USB_Key-JugendHacked/releases/download/v1.2.0/run.exe onto a flashrive
+- The flashdrive is now the key to your data
+
+## How to use CryptoUSB
+
+How to encrypt:
+- Plug the flashdrive in
+- Chose a password and the file that is to be encrypted
+- After your file is encrypted pull the flashdrive out and put it in a safe place
+
+How to decrypt:
+- plug in the flashdrive
+- run 'run.exe' and enter your password
+- press decrypt and choose your file
+
+
+
+## Compile
+```cmd
+git clone https://github.com/EdisonLamp/USB_Schluessel.git
+cd USB_Schluessel
+pip install pyinstaller
+pyinstaller -F -w .\Frontend\run.py
+```
