@@ -165,10 +165,10 @@ class Ui_MainWindow(object):
             #deData = c_key.decrypt_file(file)
             #print(bytes.decode(deData))
             open(file,"wb").write(rawData)
-            
+            QMessageBox.about(None, "USBCrypt", "entschlüsseln war erfolgreich! ✔     ")
         except cryptography.fernet.InvalidToken:
             print("Error: invalid password")
             QMessageBox.about(None, "USBCrypt", "Incorrect password!")
 
-        QMessageBox.about(None, "USBCrypt", "entschlüsseln war erfolgreich! ✔     ")
+
 
